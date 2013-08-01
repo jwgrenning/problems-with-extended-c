@@ -24,6 +24,6 @@ CPPUTEST_USE_EXTENSIONS = Y
 
 CPPUTEST_WARNINGFLAGS = -Wall -Werror -Wswitch-default  -Wfatal-errors
 CPPUTEST_CXXFLAGS =  -std=c++0x
-CPPUTEST_CFLAGS = -std=c99
+CPPUTEST_CFLAGS = -std=c99 -include test/off_target_reg1210_forced_includes.h
 
 include $(CPPUTEST_HOME)/build/MakefileWorker.mk

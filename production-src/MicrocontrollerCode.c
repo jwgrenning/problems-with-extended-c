@@ -7,7 +7,8 @@ char xdata clock_tic;
 int xdata boot_time;
 unsigned xdata voltage_samples[25];
 code char version[13] =   "ACME V1.42\n";
-at LOG_DATA_START_ADDRESS xdata unsigned log_flash[MAX_LOG_INDEX + 1];
+AT(LOG_DATA_START_ADDRESS, xdata unsigned log_flash[MAX_LOG_INDEX + 1]);
+//at LOG_DATA_START_ADDRESS xdata unsigned log_flash[MAX_LOG_INDEX + 1];
 void clock_tic_isr() interrupt 1 using 1
 {
 	clock_tic++;
