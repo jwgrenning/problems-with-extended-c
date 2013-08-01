@@ -22,22 +22,26 @@ void say_hi()
   IE = b11000000;
   SBUF0 = (0x68);
 
-  while(TI_0 == 0);
+  while(READ_REG(TI_0) == 0);
+  //  while(TI_0 == 0);
   TI_0 = 0;
 
   SBUF0 = (0x69);
 
-  while(TI_0 == 0);
+  while(READ_REG(TI_0) == 0);
+//  while(TI_0 == 0);
   TI_0 = 0;
 
   SBUF0 = (0x0a);
 
-  while(TI_0 == 0);
+  while(READ_REG(TI_0) == 0);
+//  while(TI_0 == 0);
   TI_0 = 0;
 
   SBUF0 = (0x0d);
 
-  while(TI_0 == 0);
+  while(READ_REG(TI_0) == 0);
+//  while(TI_0 == 0);
   TI_0 = 0;
 
 //  IE = 0b11010000;
