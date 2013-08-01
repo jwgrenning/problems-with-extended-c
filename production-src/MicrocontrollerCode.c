@@ -18,7 +18,8 @@ void clock_tic_isr() INTERRUPT(1) USING(1)
 
 void say_hi()
 {
-  IE = 0b11000000;
+// IE = 0b11000000;
+  IE = b11000000;
   SBUF0 = (0x68);
 
   while(TI_0 == 0);
@@ -39,5 +40,6 @@ void say_hi()
   while(TI_0 == 0);
   TI_0 = 0;
 
-  IE = 0b11010000;
+//  IE = 0b11010000;
+  IE = b11010000;
 }

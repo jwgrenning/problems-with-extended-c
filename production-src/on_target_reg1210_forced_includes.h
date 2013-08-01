@@ -5,4 +5,6 @@
 #define INTERRUPT(n) interrupt n
 #define USING(n) using n
 
+#include "binary_byte_constants.h"
+
 #endif
