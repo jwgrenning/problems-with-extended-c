@@ -213,4 +213,6 @@ extern sfr16 ONEMS;
 extern sfr16 MSEC;
 extern sfr16 BREAKPT;
 
+#define xdata
+
 #endif
