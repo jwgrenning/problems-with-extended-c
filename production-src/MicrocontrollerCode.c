@@ -1,3 +1,14 @@
+/*
+ * NOTE: I would not leave the commented out old code in here once I am done.
+ * It's here jsut to show the minor edits needed to get the legacy
+ * code under test.
+ *
+ * The say_hi() function is not interesting, it was just an easy place to
+ * start to get the tooling in place.
+ */
+
+
+
 #include "REG1210.h"
 #define RAM_START 0xc000000
 #define LOG_DATA_START_ADDRESS (RAM_START + 0x1000)
@@ -45,5 +56,6 @@ void say_hi()
   TI_0 = 0;
 
 //  IE = 0b11010000;
-  IE = b11010000;
+  WRITE_REG(IE, b11010000);
+//  IE = b11010000;
 }
