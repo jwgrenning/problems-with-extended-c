@@ -25,7 +25,7 @@ TEST(MicroControllerCode, say_hi)
 {
 	mock("register")
 			.expectOneCall("WRITE_REG")
-			.withParameter("reg", "EI")
+			.withParameter("reg", "IE")
 			.withParameter("data", b11000000);
 	mock("register")
 			.expectOneCall("READ_REG")
