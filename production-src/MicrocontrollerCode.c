@@ -19,7 +19,7 @@ void clock_tic_isr() INTERRUPT(1) USING(1)
 void say_hi()
 {
 // IE = 0b11000000;
-  IE = b11000000;
+  WRITE_REG(IE, b11000000);
   SBUF0 = (0x68);
 
   while(READ_REG(TI_0) == 0);

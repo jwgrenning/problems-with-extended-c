@@ -24,6 +24,10 @@ TEST_GROUP(MicroControllerCode)
 TEST(MicroControllerCode, say_hi)
 {
 	mock("register")
+			.expectOneCall("WRITE_REG")
+			.withParameter("reg", "EI")
+			.withParameter("data", b11000000);
+	mock("register")
 			.expectOneCall("READ_REG")
 			.withParameter("reg", "TI_0")
 			.andReturnValue(42);
