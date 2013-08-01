@@ -5,6 +5,8 @@
 #define INTERRUPT(n) interrupt n
 #define USING(n) using n
 
+#define READ_REG(r) r
+
 #include "binary_byte_constants.h"
 
 #endif
