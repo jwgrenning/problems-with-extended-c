@@ -16,6 +16,14 @@ int mock_read_reg(const char * reg)
 			.getIntValue();
 }
 
+void mock_write_reg(const char * reg, int data)
+{
+	mock("register")
+			.actualCall("WRITE_REG")
+			.withParameter("reg", reg)
+			.withParameter("data", data);
+}
+
 }
 
 TEST_GROUP(Register)
@@ -31,7 +39,7 @@ TEST_GROUP(Register)
 	}
 };
 
-TEST(Register, mock_read_write_learning_test)
+TEST(Register, mock_read_learning_test)
 {
 	mock("register")
 			.expectOneCall("READ_REG")
@@ -41,3 +49,12 @@ TEST(Register, mock_read_write_learning_test)
 	LONGS_EQUAL(42, READ_REG(TI_0));
 }
 
+TEST(Register, mock_write_learning_test)
+{
+	mock("register")
+			.expectOneCall("WRITE_REG")
+			.withParameter("reg", "TI_0")
+			.withParameter("data", 42);
+
+	WRITE_REG(TI_0, 42);
+}

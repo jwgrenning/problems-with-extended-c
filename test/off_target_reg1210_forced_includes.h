@@ -15,6 +15,9 @@ extern "C" {
 int mock_read_reg(const char *);
 #define READ_REG(r) mock_read_reg(#r)
 
+void mock_write_reg(const char *, int data);
+#define WRITE_REG(r, d) mock_write_reg(#r, d)
+
 #ifdef __cplusplus
 }
 #endif

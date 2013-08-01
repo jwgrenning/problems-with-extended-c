@@ -6,6 +6,7 @@
 #define USING(n) using n
 
 #define READ_REG(r) r
+#define WRITE_REG(r, d) r = d
 
 #include "binary_byte_constants.h"
 

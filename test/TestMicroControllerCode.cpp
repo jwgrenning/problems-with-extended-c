@@ -16,6 +16,8 @@ TEST_GROUP(MicroControllerCode)
 	}
 	void teardown()
 	{
+		mock("register").checkExpectations();
+		mock().clear();
 	}
 };
 
