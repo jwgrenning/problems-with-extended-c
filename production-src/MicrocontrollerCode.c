@@ -9,7 +9,8 @@ unsigned xdata voltage_samples[25];
 code char version[13] =   "ACME V1.42\n";
 AT(LOG_DATA_START_ADDRESS, xdata unsigned log_flash[MAX_LOG_INDEX + 1]);
 //at LOG_DATA_START_ADDRESS xdata unsigned log_flash[MAX_LOG_INDEX + 1];
-void clock_tic_isr() interrupt 1 using 1
+void clock_tic_isr() INTERRUPT(1) USING(1)
+//void clock_tic_isr() interrupt 1 using 1
 {
 	clock_tic++;
 	//.. other stuff
