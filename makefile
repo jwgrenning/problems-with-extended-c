@@ -15,6 +15,7 @@ TEST_SRC_FILES = test/AllTests.cpp test/TestMicroControllerCode.cpp
 
 INCLUDE_DIRS =\
   .\
+  compiler-includes\
   $(CPPUTEST_HOME)/include/ \
   $(CPPUTEST_HOME)/include/Platforms/Gcc\
   
