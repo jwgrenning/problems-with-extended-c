@@ -11,7 +11,9 @@ PROJECT_HOME_DIR = .
 
 SRC_FILES = production-src/MicrocontrollerCode.c
 
-TEST_SRC_FILES = test/AllTests.cpp test/TestMicroControllerCode.cpp 
+TEST_SRC_FILES = test/AllTests.cpp\
+				 test/TestMicroControllerCode.cpp\
+				 test/REG1210-globals.c 
 
 INCLUDE_DIRS =\
   .\
