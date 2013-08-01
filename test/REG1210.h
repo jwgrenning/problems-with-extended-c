@@ -214,5 +214,6 @@ extern sfr16 MSEC;
 extern sfr16 BREAKPT;
 
 #define xdata
+#define code
 
 #endif
