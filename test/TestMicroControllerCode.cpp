@@ -13,6 +13,7 @@ TEST_GROUP(MicroControllerCode)
 {
 	void setup()
 	{
+		mock("register").strictOrder();
 	}
 	void teardown()
 	{
@@ -41,11 +42,11 @@ TEST_GROUP(MicroControllerCode)
 TEST(MicroControllerCode, say_hi)
 {
 	expect_write_reg("IE", b11000000);
+	expect_read_reg("TI_0", 42);
+	expect_read_reg("TI_0", 42);
+	expect_read_reg("TI_0", 42);
+	expect_read_reg("TI_0", 42);
 	expect_write_reg("IE", b11010000);
-	expect_read_reg("TI_0", 42);
-	expect_read_reg("TI_0", 42);
-	expect_read_reg("TI_0", 42);
-	expect_read_reg("TI_0", 42);
 
 	say_hi();
 }
