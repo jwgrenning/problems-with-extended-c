@@ -1,5 +1,3 @@
-#if 0
-
 #include "REG1210.h"
 #define RAM_START 0xc000000
 #define LOG_DATA_START_ADDRESS (RAM_START + 0x1000)
@@ -41,5 +39,3 @@ void say_hi()
 
   IE = 0b11010000;
 }
-
-#endif
